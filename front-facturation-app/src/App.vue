@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <TestApi msg="Welcome to Your Vue.js App"/>
+  <WeatherForecast></WeatherForecast>
 </template>
 
 <script>
-import TestApi from './components/TestApi.vue';
+import WeatherForecast from './components/WeatherForecast.vue';
 
 export default {
   name: 'App',
   components: {
-    TestApi,
+    WeatherForecast,
   }
 }
 </script>

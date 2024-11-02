@@ -13,8 +13,8 @@ protocol.registerSchemesAsPrivileged([
 async function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1080,
+    height: 720,
     webPreferences: {
       
       // Use pluginOptions.nodeIntegration, leave this alone
@@ -24,6 +24,8 @@ async function createWindow() {
     }
   })
 
+  win.setMenuBarVisibility(false)
+  
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
     await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)

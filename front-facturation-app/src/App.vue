@@ -1,26 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <WeatherForecast></WeatherForecast>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import WeatherForecast from './components/WeatherForecast.vue';
-
 export default {
-  name: 'App',
-  components: {
-    WeatherForecast,
-  }
+  name: 'App'
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* Ajoute ton style ici si nécessaire */
 </style>

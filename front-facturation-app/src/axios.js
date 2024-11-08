@@ -1,30 +1,27 @@
 // src/axios.js
-
 import axios from 'axios';
+
+// import { getJwtToken } from '@/services/authService';
 
 // Créer une instance Axios avec une configuration par défaut
 const api = axios.create({
-  baseURL: 'https://localhost:7147', // Remplacez par votre URL de base
-  timeout: 10000, // Temps d'attente maximum
+  baseURL: 'https://localhost:5050/',
   headers: {
     'Content-Type': 'application/json',
+    
   },
 });
 
+
 // Intercepteur de requêtes (facultatif)
-api.interceptors.request.use(
-  (config) => {
-    // Ajouter des headers d'authentification, si nécessaire
-    const token = localStorage.getItem('token'); // Exemple d'obtention d'un token
-    if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`;
-    }
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
+// Ajout d'un intercepteur pour ajouter le token aux requêtes
+// api.interceptors.request.use(async config => {
+//   const token = await getJwtToken();
+//   if (token) {
+//     config.headers.Authorization = `Bearer ${token}`;
+//   }
+//   return config;
+// });
 
 // Intercepteur de réponses (facultatif)
 api.interceptors.response.use(

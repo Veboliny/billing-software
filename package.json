@@ -8,11 +8,9 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
-
     "start:electron:dev": "cross-env NODE_ENV=development concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron electron.js\"",
     "start:electron": "cross-env NODE_ENV=production concurrently \"npm run build\" \"electron electron.js\"",
     "build:electron": "electron-forge make",
-    
     "start:xcode": "npx cap open ios",
     "start:android": ""
   },
@@ -22,8 +20,11 @@
     "@capacitor/core": "^6.1.2",
     "@capacitor/electron": "^2.5.0",
     "@capacitor/ios": "^6.1.2",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
     "electron-squirrel-startup": "^1.0.1",
-    "vue": "^3.5.12"
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.5.0",

@@ -28,10 +28,7 @@ const createWindow = () => {
     } 
     
     else {
-        console.log("PROD MODE: Loading from dist/index.html");
-
         mainWindow.loadFile(path.join(__dirname, '..', 'dist', 'index.html'));
-        mainWindow.webContents.openDevTools();
     }
 }
 

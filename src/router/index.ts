@@ -1,5 +1,5 @@
 // src/router/index.js
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import LoginVue from '../views/LoginVue.vue'
 import RegisterVue from '../views/RegisterVue.vue'
 import HomeVue from '../views/HomeVue.vue'
@@ -23,8 +23,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/'),
-  routes
-})
+  history: createWebHashHistory(),
+  routes: routes
+});
 
 export default router

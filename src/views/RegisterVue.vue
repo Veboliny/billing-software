@@ -2,7 +2,7 @@
     <div class="LoginPage">
        <div class="d-flex align-items-center justify-content-center vh-100">
           <div class="card w-50 p-3">
-             <img alt="Veboliny logo" src="../assets/logo.png" style="width: 50%;" class="mx-auto d-block mb-3">
+             <img alt="Veboliny logo" src="../assets/vue.svg" style="width: 50%;" class="mx-auto d-block mb-3">
              
              <form>
                 <div class="form-group mb-3">

@@ -29,12 +29,12 @@
              this.user = res.data
           }).catch(error => {
              if (error.response) {
-             // Erreur avec une réponse de l'API
-             console.error('Erreur de récupération du user :', error.response.data);
-             console.error('Status code:', error.response.status);
+               // Erreur avec une réponse de l'API
+               console.error('Erreur de récupération du user :', error.response.data);
+               console.error('Status code:', error.response.status);
              } else {
              // Autre type d'erreur
-             console.error('Erreur lors de la récupération du user :', error.message);
+               console.error('Erreur lors de la récupération du user :', error.message);
              }
           });
        },

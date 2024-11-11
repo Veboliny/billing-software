@@ -1,0 +1,1 @@
+{"root":["./src/axios.ts","./src/main.ts","./src/shims-vue.d.ts","./src/vite-env.d.ts","./src/router/index.ts","./src/app.vue","./src/views/homevue.vue","./src/views/loginvue.vue","./src/views/navbarvue.vue","./src/views/registervue.vue"],"errors":true,"version":"5.6.3"}

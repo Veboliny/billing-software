@@ -1,18 +1,21 @@
 {
-  "name": "my-capacitor-app",
+  "name": "billing_software",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "main": "electron.js",
+  "version": "0.0.1",
+  "main": "electron/main.js",
+  "author": "Thomas LETERME",
+  "license": "ISC",
+  "description": "Billing Software",
+  "module": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview",
-    "start:electron:dev": "cross-env NODE_ENV=development concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron electron.js\"",
-    "start:electron": "cross-env NODE_ENV=production concurrently \"npm run build\" \"electron electron.js\"",
-    "build:electron": "electron-forge make",
-    "start:xcode": "npx cap open ios",
-    "start:android": ""
+
+    "electron:start": "cross-env NODE_ENV=development concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron-forge start\"",
+    "electron:build": "electron-builder",
+    
+    "xcode": "npx cap open ios",
+    "android": ""
   },
   "dependencies": {
     "@capacitor/android": "^6.1.2",
@@ -39,9 +42,32 @@
     "concurrently": "^9.1.0",
     "cross-env": "^7.0.3",
     "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "html-webpack-plugin": "^5.6.3",
     "typescript": "~5.6.2",
-    "vite": "^5.4.10",
+    "vite": "^5.4.11",
+    "vue-loader": "^17.3.1",
+    "vue-template-compiler": "^2.7.16",
     "vue-tsc": "^2.1.8",
-    "wait-on": "^8.0.1"
+    "wait-on": "^8.0.1",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "build": {
+    "appId": "com.facturation.app",
+    "productName": "Billing Software",
+    "directories": {
+      "output": "dist/electron"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }
